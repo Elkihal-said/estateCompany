@@ -8,7 +8,60 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
         
-      
+      .section{
+    background-color : black;
+    position : relative;
+    display : flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width : 120%;
+    height : 100%;
+    left : -20px;
+    top : -80px;
+    animation : animate 5s linear infinite;
+}
+span{
+    position : relative;
+    width : 40px; 
+    height : 40px;
+    display : block;
+
+}
+
+span::before{
+    
+    padding : 30px;
+    content: "";
+    position : absolute;
+    top : 0;
+    left : 0;
+    
+    background-color : #00ff0a;
+    transform: scale(0.1);
+    box-shadow: 0 0 10px #00ff0a,
+    0 0 20px #00ff0a,
+    0 0 40px #00ff0a,
+    0 0 60px #00ff0a,
+    0 0 80px #00ff0a;
+    border-radius : 50%;
+    pointer-events: none;
+    transition : 1s;
+
+    
+}
+span:hover::before{
+    transform: scale(.6);
+    transition : 0s;
+}
+@keyframes animate{
+    0%{
+        filter : hue-rotate(0deg)
+    }
+    100%{
+        filter : hue-rotate(360deg)
+    }
+
+}
 
     </style>
 </head>
